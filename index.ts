@@ -165,7 +165,7 @@ function init() {
 	retryBtn.addEventListener('click', retry);
 
 	// 개발모드
-	onlyDev();
+	// onlyDev();
 
 	if (MATRIX / 2 > minePlace.length) {
 		retry();
