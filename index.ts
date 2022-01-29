@@ -66,7 +66,7 @@ function gameWin() {
 	canvas.style.pointerEvents = 'none';
 	icon.textContent = '🥳';
 	clearInterval(tick);
-	timeCount.textContent = `${time}`;
+	timeCount.textContent = `${time}s`;
 	result.textContent = `성공! 시간 ${time}s`;
 }
 

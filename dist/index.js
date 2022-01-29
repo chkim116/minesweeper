@@ -80,7 +80,7 @@ function gameWin() {
     canvas.style.pointerEvents = 'none';
     icon.textContent = '🥳';
     clearInterval(tick);
-    timeCount.textContent = "" + time;
+    timeCount.textContent = time + "s";
     result.textContent = "\uC131\uACF5! \uC2DC\uAC04 " + time + "s";
 }
 // 게임 패배 시
