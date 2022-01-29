@@ -354,27 +354,16 @@ function init() {
         }
     }
     // 개발할때는 지뢰와 숫자가 잘 보여야지.
-    function onlyDev() {
-        var buttons = canvas.querySelectorAll('button');
-        buttons.forEach(function (node) {
-            var e_7, _a;
-            try {
-                for (var map_3 = __values(map), map_3_1 = map_3.next(); !map_3_1.done; map_3_1 = map_3.next()) {
-                    var _b = __read(map_3_1.value, 1), mapKey = _b[0];
-                    var key = toKey(mapKey);
-                    if (node.dataset.pos === key) {
-                        node.textContent = map.get(key) || '';
-                    }
-                }
-            }
-            catch (e_7_1) { e_7 = { error: e_7_1 }; }
-            finally {
-                try {
-                    if (map_3_1 && !map_3_1.done && (_a = map_3.return)) _a.call(map_3);
-                }
-                finally { if (e_7) throw e_7.error; }
-            }
-        });
-    }
+    // function onlyDev() {
+    // 	const buttons = canvas.querySelectorAll('button');
+    // 	buttons.forEach((node) => {
+    // 		for (const [mapKey] of map) {
+    // 			const key = toKey(mapKey);
+    // 			if (node.dataset.pos === key) {
+    // 				node.textContent = map.get(key) || '';
+    // 			}
+    // 		}
+    // 	});
+    // }
 }
 init();

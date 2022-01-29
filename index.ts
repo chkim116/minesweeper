@@ -324,19 +324,19 @@ function init() {
 	}
 
 	// 개발할때는 지뢰와 숫자가 잘 보여야지.
-	function onlyDev() {
-		const buttons = canvas.querySelectorAll('button');
+	// function onlyDev() {
+	// 	const buttons = canvas.querySelectorAll('button');
 
-		buttons.forEach((node) => {
-			for (const [mapKey] of map) {
-				const key = toKey(mapKey);
+	// 	buttons.forEach((node) => {
+	// 		for (const [mapKey] of map) {
+	// 			const key = toKey(mapKey);
 
-				if (node.dataset.pos === key) {
-					node.textContent = map.get(key) || '';
-				}
-			}
-		});
-	}
+	// 			if (node.dataset.pos === key) {
+	// 				node.textContent = map.get(key) || '';
+	// 			}
+	// 		}
+	// 	});
+	// }
 }
 
 init();
