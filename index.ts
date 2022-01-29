@@ -1,5 +1,3 @@
-type DifficultType = 'EASY' | 'MEDIUM' | 'HARD';
-
 const canvas = document.getElementById('canvas')! as HTMLDivElement;
 const icon = document.querySelector('.header-icon')! as HTMLSpanElement;
 const mineCount = document.querySelector(
