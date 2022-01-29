@@ -1,0 +1,23 @@
+{
+	"name": "minesweeper",
+	"version": "1.0.0",
+	"description": "지뢰찾기",
+	"main": "./dist/index.js",
+	"scripts": {
+		"build": "npx tsc -w",
+		"dev": "http-server -c-1 -o"
+	},
+	"keywords": [
+		"minesweeper",
+		"typescript",
+		"javascript",
+		"지뢰찾기",
+		"타입스크립트",
+		"자바스크립트"
+	],
+	"author": "chkim116",
+	"license": "ISC",
+	"dependencies": {
+		"http-server": "14.1.0"
+	}
+}

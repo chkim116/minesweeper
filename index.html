@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+	<style>
+		.container {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		/* header */
+		.header {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px 0;
+			gap: 20px;
+		}
+
+		.header-mine-count {
+			width: 60px;
+			line-height: 20px;
+			text-align: center;
+		}
+
+		.header-time-count {
+			width: 60px;
+			text-align: center;
+		}
+
+		.header-icon {
+			width: 50px;
+			text-align: center;
+			font-size: 30px;
+			margin-bottom: 3px;
+		}
+		/* header 끝 */
+
+		/* 지뢰 찾기 몸통 */
+		#canvas {
+			display: flex;
+			justify-content: center;
+		}
+
+		/* 지뢰 버튼 기본 스타일 */
+		button {
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		button:hover {
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+				rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+		}
+
+		button[value='1'] {
+			color: blue;
+		}
+
+		button[value='2'] {
+			color: red;
+		}
+
+		button[value='3'] {
+			color: green;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div class="header">
+				<span class="header-mine-count"></span>
+				<span class="header-icon">🙂</span>
+				<span class="header-time-count">0s</span>
+			</div>
+
+			<div id="canvas"></div>
+			<p class="result"></p>
+			<button type="button" class="all-btn" disabled>깃발 제외 오픈</button>
+			<button type="button" class="retry-btn">재시작</button>
+		</div>
+		<script src="./dist/index.js"></script>
+	</body>
+</html>

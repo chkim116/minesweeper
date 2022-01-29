@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target" : "ES5",
+		"lib": ["DOM","ESNEXT"],
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"downlevelIteration" : true,
+		"outDir": "dist",
+	},
+	"include": ["**.*"]
+}
