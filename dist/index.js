@@ -241,29 +241,27 @@ function init() {
                 emptyOpen(key);
             }
             function emptyOpen(key) {
-                setTimeout(function () {
-                    var e_3, _a;
-                    openTarget(key);
-                    var isEmpty = !map.get(key);
-                    if (isEmpty) {
-                        try {
-                            for (var _b = __values(getBoundZones(key)), _c = _b.next(); !_c.done; _c = _b.next()) {
-                                var _d = __read(_c.value, 2), i = _d[0], j = _d[1];
-                                var key_1 = toKey(i + "-" + j);
-                                var button = document.querySelector("[data-pos='" + i + "-" + j + "']");
-                                if (!button.disabled)
-                                    emptyOpen(key_1);
-                            }
-                        }
-                        catch (e_3_1) { e_3 = { error: e_3_1 }; }
-                        finally {
-                            try {
-                                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-                            }
-                            finally { if (e_3) throw e_3.error; }
+                var e_3, _a;
+                openTarget(key);
+                var isEmpty = !map.get(key);
+                if (isEmpty) {
+                    try {
+                        for (var _b = __values(getBoundZones(key)), _c = _b.next(); !_c.done; _c = _b.next()) {
+                            var _d = __read(_c.value, 2), i = _d[0], j = _d[1];
+                            var key_1 = toKey(i + "-" + j);
+                            var button = document.querySelector("[data-pos='" + i + "-" + j + "']");
+                            if (!button.disabled)
+                                emptyOpen(key_1);
                         }
                     }
-                }, 0);
+                    catch (e_3_1) { e_3 = { error: e_3_1 }; }
+                    finally {
+                        try {
+                            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                        }
+                        finally { if (e_3) throw e_3.error; }
+                    }
+                }
             }
         }
     }

@@ -245,19 +245,17 @@ function init() {
 			}
 
 			function emptyOpen(key: string) {
-				setTimeout(() => {
-					openTarget(key);
-					let isEmpty = !map.get(key);
-					if (isEmpty) {
-						for (const [i, j] of getBoundZones(key)) {
-							let key = toKey(`${i}-${j}`);
-							const button = document.querySelector(
-								`[data-pos='${i}-${j}']`
-							) as HTMLButtonElement;
-							if (!button.disabled) emptyOpen(key);
-						}
+				openTarget(key);
+				let isEmpty = !map.get(key);
+				if (isEmpty) {
+					for (const [i, j] of getBoundZones(key)) {
+						let key = toKey(`${i}-${j}`);
+						const button = document.querySelector(
+							`[data-pos='${i}-${j}']`
+						) as HTMLButtonElement;
+						if (!button.disabled) emptyOpen(key);
 					}
-				}, 0);
+				}
 			}
 		}
 	}
