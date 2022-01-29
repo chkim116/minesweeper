@@ -91,14 +91,13 @@ function openTarget(key: string) {
 		activeAllOpenButton();
 	}
 
-	if (button.dataset.state === 'open') return;
+	if (button.disabled) return;
 
 	const value = map.get(key) || '';
 
 	button.value = value;
 	button.textContent = value;
 	button.disabled = isMine(value) ? false : true;
-	button.dataset.state = 'open';
 	button.style.pointerEvents = 'none';
 	openCount++;
 
@@ -166,7 +165,7 @@ function init() {
 	retryBtn.addEventListener('click', retry);
 
 	// 개발모드
-	// onlyDev();
+	onlyDev();
 
 	if (MATRIX / 2 > minePlace.length) {
 		retry();
@@ -255,7 +254,7 @@ function init() {
 							const button = document.querySelector(
 								`[data-pos='${i}-${j}']`
 							) as HTMLButtonElement;
-							if (button.dataset.state !== 'open') emptyOpen(key);
+							if (!button.disabled) emptyOpen(key);
 						}
 					}
 				}, 0);
